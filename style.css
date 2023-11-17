@@ -4,6 +4,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    background: url('4155443-natal-feriado-fundo-gratis-foto.jpg') center/cover no-repeat; /* Adicione esta linha para definir a imagem de fundo */
 }
 
 .container {
