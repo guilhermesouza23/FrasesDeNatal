@@ -70,9 +70,10 @@ function criarFogosDeArtificio() {
         animarFogo(fogo);
     }
 
+    // Aumentando o tempo para 15 segundos
     setTimeout(function () {
         fogosContainer.innerHTML = "";
-    }, 5000);
+    }, 15000);
 }
 
 function animarFogo(fogo) {
@@ -88,9 +89,15 @@ function animarFogo(fogo) {
     fogo.style.top = yPos + "px";
     fogo.style.backgroundColor = color;
 
+    // Tempo total da animação dos fogos
+    const animationTime = 10000;
+
+    // Ajuste a opacidade para piscar
+    fogo.style.animation = `fogoAnimation ${animationTime / 2}ms linear infinite`;
+
     setTimeout(function () {
         fogo.parentNode.removeChild(fogo);
-    }, 3000);
+    }, animationTime);
 }
 
 function gerarFrase() {
