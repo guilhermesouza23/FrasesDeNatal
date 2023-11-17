@@ -61,17 +61,17 @@ function gerarFrase() {
     // Exibe a frase gerada
     fraseElement.textContent = fraseGerada;
 
-    // Esconde o botão por 13 segundos
+    // Esconde o botão por 10 segundos
     botaoElement.style.display = "none";
 
-    // Mostra o botão após 13 segundos
+    // Mostra o botão após 10 segundos
     setTimeout(() => {
         botaoElement.style.display = "block";
-    }, 13000);
+    }, 10000);
 
     // Limpa a frase após 13 segundos
     setTimeout(() => {
         fraseElement.textContent = "";
-    }, 13000);
+    }, 10000);
 }
 
