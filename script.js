@@ -63,5 +63,5 @@ function gerarFrase() {
     // Limpa a frase após 8 segundos
     setTimeout(() => {
         fraseElement.textContent = "";
-    }, 8000);
+    }, 13000);
 }
