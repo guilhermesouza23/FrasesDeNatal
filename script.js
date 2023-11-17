@@ -56,12 +56,22 @@ function gerarFrase() {
     const indiceAleatorio = Math.floor(Math.random() * frasesNatal.length);
     const fraseGerada = frasesNatal[indiceAleatorio];
     const fraseElement = document.getElementById("fraseGerada");
+    const botaoElement = document.getElementById("botaoGerar");
 
     // Exibe a frase gerada
     fraseElement.textContent = fraseGerada;
 
-    // Limpa a frase após 8 segundos
+    // Esconde o botão por 13 segundos
+    botaoElement.style.display = "none";
+
+    // Mostra o botão após 13 segundos
+    setTimeout(() => {
+        botaoElement.style.display = "block";
+    }, 13000);
+
+    // Limpa a frase após 13 segundos
     setTimeout(() => {
         fraseElement.textContent = "";
     }, 13000);
 }
+
