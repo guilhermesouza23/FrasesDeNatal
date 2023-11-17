@@ -52,25 +52,71 @@ const frasesNatal = [
     "Natal é tempo de espalhar alegria e cultivar bons sentimentos."
 ];
 
+document.getElementById("botaoGerar").addEventListener("click", function () {
+    gerarFrase();
+    criarFogosDeArtificio();
+});
+
+function criarFogosDeArtificio() {
+    const fogosContainer = document.getElementById("fogosContainer");
+
+    fogosContainer.innerHTML = "";
+
+    for (let i = 0; i < 30; i++) {
+        const fogo = document.createElement("div");
+        fogo.className = "fogo";
+        fogosContainer.appendChild(fogo);
+
+        animarFogo(fogo);
+    }
+
+    setTimeout(function () {
+        fogosContainer.innerHTML = "";
+    }, 5000);
+}
+
+function animarFogo(fogo) {
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    const xPos = Math.random() * screenWidth;
+    const yPos = Math.random() * screenHeight;
+
+    const color = getRandomColor();
+
+    fogo.style.left = xPos + "px";
+    fogo.style.top = yPos + "px";
+    fogo.style.backgroundColor = color;
+
+    setTimeout(function () {
+        fogo.parentNode.removeChild(fogo);
+    }, 3000);
+}
+
 function gerarFrase() {
     const indiceAleatorio = Math.floor(Math.random() * frasesNatal.length);
     const fraseGerada = frasesNatal[indiceAleatorio];
     const fraseElement = document.getElementById("fraseGerada");
     const botaoElement = document.getElementById("botaoGerar");
 
-    // Exibe a frase gerada
     fraseElement.textContent = fraseGerada;
 
-    // Esconde o botão por 10 segundos
     botaoElement.style.display = "none";
 
-    // Mostra o botão após 10 segundos
     setTimeout(() => {
         botaoElement.style.display = "block";
     }, 10000);
 
-    // Limpa a frase após 13 segundos
     setTimeout(() => {
         fraseElement.textContent = "";
     }, 10000);
+}
+
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
