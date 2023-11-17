@@ -12,5 +12,6 @@ body {
 
 button {
     margin-top: 20px;
-    margin-right: 10px; /* Ajuste conforme necessário */
+    margin-right: auto; /* Ajusta automaticamente para manter o botão centralizado */
+    transition: margin 0.5s ease;
 }
