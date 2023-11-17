@@ -11,5 +11,6 @@ body {
 }
 
 button {
-    margin-top: 20px; /* Ajuste conforme necessário */
+    margin-top: 20px;
+    margin-right: 10px; /* Ajuste conforme necessário */
 }
