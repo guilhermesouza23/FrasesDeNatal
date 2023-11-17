@@ -49,11 +49,19 @@ const frasesNatal = [
     "Que a magia natalina renove suas energias e inspire novas conquistas.",
     "Feliz Natal! Que a felicidade seja constante em sua vida.",
     "Que a magia do Natal envolva você em um abraço caloroso de amor.",
-    "Natal é tempo de espalhar alegria e cultivar bons sentimentos.",
+    "Natal é tempo de espalhar alegria e cultivar bons sentimentos."
 ];
 
 function gerarFrase() {
     const indiceAleatorio = Math.floor(Math.random() * frasesNatal.length);
     const fraseGerada = frasesNatal[indiceAleatorio];
-    document.getElementById("fraseGerada").textContent = fraseGerada;
+    const fraseElement = document.getElementById("fraseGerada");
+
+    // Exibe a frase gerada
+    fraseElement.textContent = fraseGerada;
+
+    // Limpa a frase após 8 segundos
+    setTimeout(() => {
+        fraseElement.textContent = "";
+    }, 8000);
 }
