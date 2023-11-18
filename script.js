@@ -76,7 +76,7 @@ function criarFogosDeArtificio() {
     // Aumentando o tempo para 15 segundos
     setTimeout(function () {
         fogosContainer.innerHTML = "";
-    }, 15000);
+    }, 10000);
 }
 
 function animarFogo(fogo) {
