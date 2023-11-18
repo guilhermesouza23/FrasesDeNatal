@@ -62,7 +62,10 @@ function criarFogosDeArtificio() {
 
     fogosContainer.innerHTML = "";
 
-    for (let i = 0; i < 30; i++) {
+    // Ajuste o número de fogos (aumente ou diminua conforme necessário)
+    const numeroFogos = 50;
+
+    for (let i = 0; i < numeroFogos; i++) {
         const fogo = document.createElement("div");
         fogo.className = "fogo";
         fogosContainer.appendChild(fogo);
