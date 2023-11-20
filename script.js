@@ -1,4 +1,4 @@
-const frasesNatal = [
+const frasesNatal = [<h2>
     "Que o espírito natalino traga alegria e felicidade para o seu lar.",
     "Neste Natal, desejo paz, amor e prosperidade para todos.",
     "Que a magia do Natal ilumine o seu caminho com esperança e bondade.",
@@ -50,6 +50,7 @@ const frasesNatal = [
     "Feliz Natal! Que a felicidade seja constante em sua vida.",
     "Que a magia do Natal envolva você em um abraço caloroso de amor.",
     "Natal é tempo de espalhar alegria e cultivar bons sentimentos."
+        </h2>
 ];
 
 document.getElementById("botaoGerar").addEventListener("click", function () {
