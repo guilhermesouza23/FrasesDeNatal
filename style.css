@@ -18,10 +18,7 @@ button {
     display: block;
     transition: margin 0.5s ease;
 }
-#botaoGerar {
-    font-size: 1.5em; /* Defina o tamanho da fonte do botão conforme necessário */
-    padding: 10px 20px; /* Ajuste o preenchimento (padding) conforme necessário */
-}
+
 
 #fogosContainer {
   position: absolute;
