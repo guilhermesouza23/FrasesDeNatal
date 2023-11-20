@@ -1,28 +1,6 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .fogo {
-            width: 5px;
-            height: 5px;
-            position: absolute;
-            border-radius: 50%;
-            animation: fogoAnimation 1s linear infinite;
-        }
-    </style>
-    <title>Frases de Natal</title>
-</head>
-<body>
-    <button id="botaoGerar">Gerar Frase</button>
-    <h2 id="fraseGerada"></h2>
-    <div id="fogosContainer"></div>
-
-    <script>
-        const frasesNatal = [
-               "Que o espírito natalino traga alegria e felicidade para o seu lar.",
+User
+    const frasesNatal = [
+    "Que o espírito natalino traga alegria e felicidade para o seu lar.",
     "Neste Natal, desejo paz, amor e prosperidade para todos.",
     "Que a magia do Natal ilumine o seu caminho com esperança e bondade.",
     "Feliz Natal! Que os dias vindouros sejam repletos de realizações.",
@@ -73,83 +51,84 @@
     "Feliz Natal! Que a felicidade seja constante em sua vida.",
     "Que a magia do Natal envolva você em um abraço caloroso de amor.",
     "Natal é tempo de espalhar alegria e cultivar bons sentimentos."
-        ];
 
-        document.getElementById("botaoGerar").addEventListener("click", function () {
-            gerarFrase();
-            criarFogosDeArtificio();
-        });
+];
 
-        function criarFogosDeArtificio() {
-            const fogosContainer = document.getElementById("fogosContainer");
+document.getElementById("botaoGerar").addEventListener("click", function () {
+    gerarFrase();
+    criarFogosDeArtificio();
+});
 
-            fogosContainer.innerHTML = "";
+function criarFogosDeArtificio() {
+    const fogosContainer = document.getElementById("fogosContainer");
 
-            const numeroFogos = 50;
+    fogosContainer.innerHTML = "";
 
-            for (let i = 0; i < numeroFogos; i++) {
-                const fogo = document.createElement("div");
-                fogo.className = "fogo";
-                fogosContainer.appendChild(fogo);
+    // Ajuste o número de fogos (aumente ou diminua conforme necessário)
+    const numeroFogos = 50;
 
-                animarFogo(fogo);
-            }
+    for (let i = 0; i < numeroFogos; i++) {
+        const fogo = document.createElement("div");
+        fogo.className = "fogo";
+        fogosContainer.appendChild(fogo);
 
-            setTimeout(function () {
-                fogosContainer.innerHTML = "";
-            }, 10000);
-        }
+        animarFogo(fogo);
+    }
 
-        function animarFogo(fogo) {
-            const screenWidth = window.innerWidth;
-            const screenHeight = window.innerHeight;
+    // Aumentando o tempo para 15 segundos
+    setTimeout(function () {
+        fogosContainer.innerHTML = "";
+    }, 10000);
+}
 
-            const xPos = Math.random() * screenWidth;
-            const yPos = Math.random() * screenHeight;
+function animarFogo(fogo) {
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
 
-            const color = getRandomColor();
+    const xPos = Math.random() * screenWidth;
+    const yPos = Math.random() * screenHeight;
 
-            fogo.style.left = xPos + "px";
-            fogo.style.top = yPos + "px";
-            fogo.style.backgroundColor = color;
+    const color = getRandomColor();
 
-            const animationTime = 10000;
+    fogo.style.left = xPos + "px";
+    fogo.style.top = yPos + "px";
+    fogo.style.backgroundColor = color;
 
-            fogo.style.animation = `fogoAnimation ${animationTime / 2}ms linear infinite`;
+    // Tempo total da animação dos fogos
+    const animationTime = 10000;
 
-            setTimeout(function () {
-                fogo.parentNode.removeChild(fogo);
-            }, animationTime);
-        }
+    // Ajuste a opacidade para piscar
+    fogo.style.animation = `fogoAnimation ${animationTime / 2}ms linear infinite`;
 
-        function gerarFrase() {
-            const indiceAleatorio = Math.floor(Math.random() * frasesNatal.length);
-            const fraseGerada = frasesNatal[indiceAleatorio];
-            const fraseElement = document.getElementById("fraseGerada");
-            const botaoElement = document.getElementById("botaoGerar");
+    setTimeout(function () {
+        fogo.parentNode.removeChild(fogo);
+    }, animationTime);
+}
 
-            fraseElement.textContent = fraseGerada;
+function gerarFrase() {
+    const indiceAleatorio = Math.floor(Math.random() * frasesNatal.length);
+    const fraseGerada = frasesNatal[indiceAleatorio];
+    const fraseElement = document.getElementById("fraseGerada");
+    const botaoElement = document.getElementById("botaoGerar");
 
-            botaoElement.style.display = "none";
+    <h2>fraseElement.textContent = fraseGerada;</h2>
 
-            setTimeout(() => {
-                botaoElement.style.display = "block";
-            }, 10000);
+    botaoElement.style.display = "none";
 
-            setTimeout(() => {
-                fraseElement.textContent = "";
-            }, 10000);
-        }
+    setTimeout(() => {
+        botaoElement.style.display = "block";
+    }, 10000);
 
-        function getRandomColor() {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-    </script>
-</body>
-</html>
+    setTimeout(() => {
+        fraseElement.textContent = "";
+    }, 10000);
+}
 
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
