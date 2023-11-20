@@ -111,7 +111,7 @@ function gerarFrase() {
     const fraseElement = document.getElementById("fraseGerada");
     const botaoElement = document.getElementById("botaoGerar");
 
-    <h2>fraseElement.textContent = fraseGerada;</h2>
+    fraseElement.textContent = fraseGerada;
 
     botaoElement.style.display = "none";
 
