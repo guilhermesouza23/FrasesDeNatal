@@ -1,4 +1,4 @@
-User
+
     const frasesNatal = [
     "Que o espírito natalino traga alegria e felicidade para o seu lar.",
     "Neste Natal, desejo paz, amor e prosperidade para todos.",
