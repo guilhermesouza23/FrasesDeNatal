@@ -17,12 +17,28 @@ h1 {
 }
 
 button {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    transition: margin 0.5s ease;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 15px 30px; /* Ajuste o tamanho do botão conforme necessário */
+  font-size: 1.2rem; /* Ajuste o tamanho da fonte conforme necessário */
+  background-color: #3498db; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Efeito de transição na cor de fundo */
 }
+
+button:hover {
+  background-color: #2980b9; /* Cor de fundo do botão ao passar o mouse */
+}
+
+button:active {
+  transform: scale(0.95); /* Efeito de escala ao pressionar o botão */
+}
+
 
 
 #fogosContainer {
