@@ -108,7 +108,6 @@ function gerarFrase() {
 
     fraseElement.textContent = fraseGerada;
 
-   
     botaoElement.style.display = "none";
 
     setTimeout(() => {
