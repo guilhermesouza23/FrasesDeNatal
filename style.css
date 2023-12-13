@@ -8,12 +8,23 @@ body {
   background-size: 100% 100%;
 }
 
-#fraseGerada {
-    font-size: 2rem; /* Ajuste o tamanho da fonte conforme necessário */
-    font-weight: bold; /* Adicione essa linha se quiser que o texto seja em negrito */
-    color: #ffffff; /* Adicione essa linha para definir a cor do texto */
-  white-space: pre-line; /* Permite quebras de linha */
+#fraseContainer {
+    display: none; /* Oculta a div inicialmente */
+    background-color: transparent; /* Fundo transparente */
+    border: 2px solid black; /* Borda preta */
+    padding: 10px; /* Espaçamento interno para a borda */
+    position: fixed; /* Fixa a posição */
+    left: 8cm; /* Distância da borda esquerda */
+    top: 0; /* Ajuste conforme necessário para a distância do topo */
 }
+
+#fraseGerada {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    white-space: pre-line;
+}
+
 
 h1 {
     font-size: 24px;
