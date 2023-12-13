@@ -106,6 +106,7 @@ function gerarFrase() {
     const fraseElement = document.getElementById("fraseGerada");
     const botaoElement = document.getElementById("botaoGerar");
     const containerElement = document.querySelector(".container");
+    const h1Element = document.querySelector("h1");
 
     fraseElement.textContent = fraseGerada;
 
@@ -120,6 +121,9 @@ function gerarFrase() {
     // Aplicar estilo ao contêiner para mover para o canto direito
     containerElement.style.textAlign = "right";
     containerElement.style.marginRight = "20px"; // Ajuste conforme necessário
+
+    // Aplicar estilo ao título (h1) para mover para a direita
+    h1Element.style.marginRight = "20px"; // Ajuste conforme necessário
 
     setTimeout(() => {
         botaoElement.style.display = "block";
