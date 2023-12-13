@@ -19,7 +19,8 @@ h1 {
 }
 
 .container {
-    text-align: center;
+    text-align: right; /* Mover o conteúdo para o canto direito */
+    margin-right: 20px; /* Espaçamento direito (ajuste conforme necessário) */
 }
 
 button {
