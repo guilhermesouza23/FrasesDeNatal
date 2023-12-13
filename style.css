@@ -16,19 +16,19 @@ body {
 
 h1 {
     font-size: 24px;
-    margin-right: 20px; /* Mover para a direita (ajuste conforme necessário) */
+    margin-right: 30px; /* Mover para a direita (ajuste conforme necessário) */
 }
 
 
 .container {
     text-align: right; /* Mover o conteúdo para o canto direito */
-    margin-right: 20px; /* Espaçamento direito (ajuste conforme necessário) */
+    margin-right: 30px; /* Espaçamento direito (ajuste conforme necessário) */
 }
 
 button {
   margin-top: 20px;
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 30px;
   display: block;
   padding: 15px 30px; /* Ajuste o tamanho do botão conforme necessário */
   font-size: 1.2rem; /* Ajuste o tamanho da fonte conforme necessário */
