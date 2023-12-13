@@ -15,8 +15,10 @@ body {
 }
 
 h1 {
-  font-size: 24px; /* Tamanho de fonte para h1 */
+    font-size: 24px;
+    margin-right: 20px; /* Mover para a direita (ajuste conforme necessário) */
 }
+
 
 .container {
     text-align: right; /* Mover o conteúdo para o canto direito */
@@ -26,7 +28,7 @@ h1 {
 button {
   margin-top: 20px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 20px;
   display: block;
   padding: 15px 30px; /* Ajuste o tamanho do botão conforme necessário */
   font-size: 1.2rem; /* Ajuste o tamanho da fonte conforme necessário */
