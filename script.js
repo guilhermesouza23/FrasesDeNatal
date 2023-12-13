@@ -105,10 +105,21 @@ function gerarFrase() {
     const fraseGerada = frasesNatal[indiceAleatorio];
     const fraseElement = document.getElementById("fraseGerada");
     const botaoElement = document.getElementById("botaoGerar");
+    const containerElement = document.querySelector(".container");
 
     fraseElement.textContent = fraseGerada;
 
+    // Aplicar estilo ao parágrafo
+    fraseElement.style.fontSize = "2rem";
+    fraseElement.style.fontWeight = "bold";
+    fraseElement.style.color = "#ffffff";
+
+    // Aplicar estilo ao botão
     botaoElement.style.display = "none";
+
+    // Aplicar estilo ao contêiner para mover para o canto direito
+    containerElement.style.textAlign = "right";
+    containerElement.style.marginRight = "20px"; // Ajuste conforme necessário
 
     setTimeout(() => {
         botaoElement.style.display = "block";
