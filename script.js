@@ -108,8 +108,14 @@ function gerarFrase() {
 
     fraseElement.textContent = fraseGerada;
 
-    botaoElement.style.display = "none";
+    // Aplicar estilo ao parágrafo
+    fraseElement.style.fontSize = "2rem"; // Ajuste o tamanho da fonte conforme necessário
+    fraseElement.style.fontWeight = "bold"; // Adicione essa linha se quiser que o texto seja em negrito
+    fraseElement.style.color = "#ffffff"; // Adicione essa linha para definir a cor do texto
 
+    // Ocultar o botão
+    botaoElement.style.display = "none";
+}
     setTimeout(() => {
         botaoElement.style.display = "block";
     }, 10000);
