@@ -12,6 +12,7 @@ body {
     font-size: 2rem; /* Ajuste o tamanho da fonte conforme necessário */
     font-weight: bold; /* Adicione essa linha se quiser que o texto seja em negrito */
     color: #ffffff; /* Adicione essa linha para definir a cor do texto */
+  white-space: pre-line; /* Permite quebras de linha */
 }
 
 h1 {
